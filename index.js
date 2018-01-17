@@ -35,6 +35,7 @@ function viewCart() {
       }
     }
     console.log(message);
+    return
   }
 }
 
