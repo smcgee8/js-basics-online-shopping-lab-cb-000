@@ -19,31 +19,31 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+  var message, item_hash, item, price;
   if (cart.length === 0) {
     console.log("Your shopping cart is empty.");
   } else {
-    var message = `In your cart, you have `;
+    message = `In your cart, you have `;
 
     if (cart.length === 1) {
+      item_hash = cart[0];
+      item = Object.keys(item_hash).first;
+      price = item_hash[item];
       message += `${item} at $${price}.`;
     } else if(cart.length === 2) {
-      
+      item_hash = cart[0];
+      item = Object.keys(item_hash).first;
+      price = item_hash[item];
+      message += `${item} at $${price}`;
+      item_hash = cart[1];
+      item = Object.keys(item_hash).first;
+      price = item_hash[item];
+      message += ` and ${item} at $${price}.`;
     } else {
-      
+      //for (var i = 0; i < cart.length; i++) {
     }
 
     console.log(message);
-  }
-}
-
-    for (var i = 0; i < cart.length; i++) {
-      var item_hash = cart[i];
-      var item = Object.keys(item_hash).first;
-      var price = item_hash[item];
-      //`and ${item} at $${price}.`;
-      
-    }
-    console.log(message)
   }
 }
 
