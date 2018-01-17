@@ -26,6 +26,7 @@ function viewCart() {
     var price = item_hash[item]
     message += `${item} at ${price}, `
   }
+  return message
 }
 
 function total() {
