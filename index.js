@@ -19,14 +19,18 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var message = `In your cart, you have `;
-  //for (var i = 0; i < cart.length; i++) {
-    //var item_hash = cart[i];
-    //var item = Object.keys(item_hash).first;
-    //var price = item_hash[item];
-    //message += `${item} at $${price}, `;
-  //}
-  return message;
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else {
+    var message = `In your cart, you have `;
+    for (var i = 0; i < cart.length; i++) {
+      var item_hash = cart[i];
+      var item = Object.keys(item_hash).first;
+      var price = item_hash[item];
+      message += `${item} at $${price}, `;
+    }
+    return message;
+  }
 }
 
 function total() {
