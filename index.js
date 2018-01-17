@@ -19,6 +19,13 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+  message = `In your cart, you have `
+  for (var i = 0; i < cart.length; i++) {
+    var item_hash = cart[i]
+    var item = item_hash.keys().first
+    var price = item_hash[item]
+    message += `${item} at ${item[]}.`
+  }
 }
 
 function total() {
