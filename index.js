@@ -24,7 +24,7 @@ function viewCart() {
     var item_hash = cart[i];
     var item = Object.keys(item_hash).first;
     var price = item_hash[item];
-    message += `${item} at ${price}, `;
+    message += `${item} at $${price}, `;
   }
   return message;
 }
