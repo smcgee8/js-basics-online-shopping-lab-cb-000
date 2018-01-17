@@ -27,7 +27,7 @@ function viewCart() {
       var item_hash = cart[i];
       var item = Object.keys(item_hash).first;
       var price = item_hash[item];
-      if (i === (cart.length - 1) {
+      if (i === (cart.length - 1)) {
         message += `and ${item} at $${price}.`;
       } else {
         message += `${item} at $${price}, `;
