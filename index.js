@@ -31,6 +31,7 @@ function viewCart() {
       price = item_hash[item];
       message += `${item} at $${price}.`;
     } else if(cart.length === 2) {
+      debugger;
       item_hash = cart[0];
       item = Object.keys(item_hash).first;
       price = item_hash[item];
