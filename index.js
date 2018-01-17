@@ -30,7 +30,7 @@ function viewCart() {
       if (i === cart.length - 1) {
         message += `and ${item} at $${price}.`;
       } else {
-      message += `${item} at $${price}, `;
+        message += `${item} at $${price}, `;
       }
     }
     return message;
