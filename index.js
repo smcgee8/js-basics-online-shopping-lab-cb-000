@@ -25,11 +25,11 @@ function viewCart() {
     var message = `In your cart, you have `;
 
     if (cart.length === 1) {
-
+      message += `${item} at $${price}.`;
     } else if(cart.length === 2) {
-
+      
     } else {
-
+      
     }
 
     console.log(message);
@@ -41,7 +41,7 @@ function viewCart() {
       var item = Object.keys(item_hash).first;
       var price = item_hash[item];
       //`and ${item} at $${price}.`;
-
+      
     }
     console.log(message)
   }
