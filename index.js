@@ -23,6 +23,19 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   } else {
     var message = `In your cart, you have `;
+
+    if (cart.length === 1) {
+
+    } else if(cart.length === 2) {
+
+    } else {
+
+    }
+
+    console.log(message);
+  }
+}
+
     for (var i = 0; i < cart.length; i++) {
       var item_hash = cart[i];
       var item = Object.keys(item_hash).first;
