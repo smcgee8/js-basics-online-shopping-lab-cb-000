@@ -24,7 +24,7 @@ function viewCart() {
     var item_hash = cart[i]
     var item = item_hash.keys().first
     var price = item_hash[item]
-    message += `${item} at ${item[]}.`
+    message += `${item} at ${price}, `
   }
 }
 
