@@ -21,7 +21,6 @@ function viewCart() {
   // write your code here
   if (cart.length === 0) {
     console.log("Your shopping cart is empty.");
-    return
   } else {
     var message = `In your cart, you have `;
     for (var i = 0; i < cart.length; i++) {
@@ -35,7 +34,6 @@ function viewCart() {
       }
     }
     console.log(message);
-    return
   }
 }
 
