@@ -31,7 +31,6 @@ function viewCart() {
       price = item_hash[item];
       message += `${item} at $${price}.`;
     } else if(cart.length === 2) {
-      debugger;
       item_hash = cart[0];
       item = Object.keys(item_hash)[0];
       price = item_hash[item];
@@ -41,9 +40,21 @@ function viewCart() {
       price = item_hash[item];
       message += ` and ${item} at $${price}.`;
     } else {
-      //for (var i = 0; i < cart.length; i++) {
+      item_hash = cart[0];
+      item = Object.keys(item_hash)[0];
+      price = item_hash[item];
+      message += `${item} at $${price}`;
+      for (i = 1; i < cart.length - 1; i++) {
+        item_hash = cart[i];
+        item = Object.keys(item_hash)[0];
+        price = item_hash[item];
+        message += `, ${item} at $${price}`;
+      }
+      item_hash = cart[cart.length - 1];
+      item = Object.keys(item_hash)[0];
+      price = item_hash[item];
+      message += `, and ${item} at $${price}.`;
     }
-
     console.log(message);
   }
 }
