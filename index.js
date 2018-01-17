@@ -75,9 +75,11 @@ function removeFromCart(item) {
     var hash_item = Object.keys(cart[i])[0];
     if (hash_item === item) {
       cart.splice(i, 1);
+      return cart;
     }
   }
-  return cart
+  console.log("That item is not in your cart.")
+
 }
 
 function placeOrder(cardNumber) {
