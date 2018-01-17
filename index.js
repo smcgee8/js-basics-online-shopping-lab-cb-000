@@ -33,7 +33,7 @@ function viewCart() {
         message += `${item} at $${price}, `;
       }
     }
-    return message;
+    console.log(message);
   }
 }
 
