@@ -28,9 +28,17 @@ function viewCart() {
       var item = Object.keys(item_hash).first;
       var price = item_hash[item];
       if (i === (cart.length - 1)) {
-        message += `and ${item} at $${price}.`;
+        if (cart.length === 2) {
+          message += `and ${item} at $${price}.`;
+        } else {
+          message += `and ${item} at $${price}.`;
+        }
       } else {
-        message += `${item} at $${price}, `;
+        if (cart.length === 2) {
+          message += `${item} at $${price} `;
+        } else {
+          message += `${item} at $${price} `;
+        }
       }
     }
     console.log(message);
